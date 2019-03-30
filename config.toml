@@ -1,0 +1,49 @@
+baseURL = "https://instrumenta.dev/"
+languageCode = "en-gb"
+title = "instrumenta.dev"
+theme = "dot"
+pygmentsCodefences = true
+pygmentsStyle = "solarized-dark"
+
+[permalinks]
+  posts = "/:year/:month/:title/"
+
+
+[params]
+primaryColor = "#19647e"
+secondaryColor = "#f9f9f9"
+textColor = "#636363"
+textColorDark = "#242738"
+whiteColor = "#ffffff"
+home = "Home"
+logo = "instrumenta.dev"
+
+[params.banner]
+  title = "Cloud Native Testing Tools"
+  description = "A collection of open source projects for testing modern software and infrastructure"
+
+[params.topics]
+  title = "Current projects"
+
+[params.cta]
+  enable = true
+  title = "Get involved"
+  description = "Get involved in the individual projects, contribute code, documentation and report issues."
+  btnText = "GitHub"
+  btnURL = "https://github.com/instrumenta"
+
+[[params.socialIcon]]
+  icon = "ti-github"
+  URL = "https://github.com/instrumenta"
+
+
+[menu]
+  [[menu.main]]
+    weight = 1
+    name = "about"
+    url = "/about"
+
+  [[menu.main]]
+    weight = 2
+    name = "GitHub"
+    url = "https://github.com/instrumenta"
