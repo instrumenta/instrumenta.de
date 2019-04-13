@@ -5,6 +5,9 @@ theme = "dot"
 pygmentsCodefences = true
 pygmentsStyle = "solarized-dark"
 
+googleAnalytics = "UA-435455-17"
+
+
 [permalinks]
   posts = "/:year/:month/:title/"
 
