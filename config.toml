@@ -1,49 +1,26 @@
 baseURL = "https://instrumenta.dev/"
 languageCode = "en-gb"
-title = "instrumenta.dev"
-theme = "dot"
+title = "Instrumenta"
+theme = "kube"
 pygmentsCodefences = true
 pygmentsStyle = "solarized-dark"
 
 googleAnalytics = "UA-435455-17"
 
 
-[permalinks]
-  posts = "/:year/:month/:title/"
-
-
 [params]
-primaryColor = "#19647e"
-secondaryColor = "#f9f9f9"
+primaryColor = "#3B248D"
+secondaryColor = "#F9FAF5"
+gradientTopColor = "#3B248D"
+gradientBottomColor = "#6E3BC5"
 textColor = "#636363"
-textColorDark = "#242738"
-whiteColor = "#ffffff"
-home = "Home"
-logo = "instrumenta.dev"
-
-[params.banner]
-  title = "Cloud Native Testing Tools"
-  description = "A collection of open source projects for testing modern software and infrastructure"
-
-[params.topics]
-  title = "Current projects"
-
-[params.cta]
-  enable = true
-  title = "Get involved"
-  description = "Get involved in the individual projects, contribute code, documentation and report issues."
-  btnText = "GitHub"
-  btnURL = "https://github.com/instrumenta"
-
-[[params.socialIcon]]
-  icon = "ti-github"
-  URL = "https://github.com/instrumenta"
-
+textColorDark = "#043698"
+whiteColor = "#FFF"
 
 [menu]
   [[menu.main]]
     weight = 1
-    name = "about"
+    name = "About"
     url = "/about"
 
   [[menu.main]]

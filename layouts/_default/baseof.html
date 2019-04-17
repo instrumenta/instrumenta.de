@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  {{ .Hugo.Generator }}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+  {{ $font := resources.Get "css/font.css" }}
+  {{ $kube := resources.Get "css/kube.css" }}
+  {{ $master := resources.Get "css/master.css" }}
+  {{ $instrumenta := resources.Get "css/instrumenta.css" }}
+  {{ $styles := slice $font $kube $master $instrumenta | resources.Concat "css/all.css" | minify | fingerprint }}
+  <link href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" rel="stylesheet" type="text/css">
+  <script src="{{ "/js/jquery-2.1.4.min.js" | relURL }}" type="text/javascript"></script>
+</head>
+
+<body class="page-kube">
+  <header>{{ block "header" . }}{{ end }}</header>
+  <main>{{ block "main" . }}{{ end }}</main>
+  <footer>{{ block "footer" . }}{{ end }}</footer>
+
+  <script src="{{ "/js/kube.js" | relURL }}" type="text/javascript"></script>
+  {{ template "_internal/google_analytics_async.html" . }}
+</body>
+</html>

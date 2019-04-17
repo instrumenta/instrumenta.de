@@ -1,0 +1,30 @@
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
+
+<div id="main">
+  <div id="hero">
+      {{ $logo := resources.Get "img/instrumenta-logo.png" }}
+      {{ $logo := $logo.Resize "600x" }}
+      <h1><img src="{{ $logo.RelPermalink }}" alt="{{.Title}}"></h1>
+  </div>
+  <div id="kube-features">
+    <div class="row gutters">
+      <div class="col col-4 item">
+        <h3><a href="https://github.com/instrumenta/kubeval">Kubeval</a></h3>
+        <p>Validate your Kubernetes manifests locally and in CI</p>
+      </div>
+      <div class="col col-4 item">
+        <h3><a href="https://github.com/instrumenta/conftest">Conftest</a></h3>
+        <p>Write tests against your JSON and YAML configuration using Open Policy Agent</p>
+      </div>
+      <div class="col col-4 item">
+        <h3><a href="https://github.com/instrumenta/kubernetes-json-schema">Kubernetes JSON Schema</a></h3>
+        <p>JSON Schemas for every Kubernetes version. Ideal for tool building</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{end}}
